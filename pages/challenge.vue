@@ -39,7 +39,7 @@
 import bravadoNavigation from '~/components/bravadoNavigation.vue'
 
 export default { 
-  
+  layout: 'user',
   components: { bravadoNavigation },
   
 }
@@ -51,13 +51,4 @@ export default {
 
 
 <style>
-#Bravado{
-  font-size: 50px;
-  text-align: center;
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-}
-
-
 </style>
