@@ -1,8 +1,9 @@
 <template>
 <b-container fluid>
-  <p id="Bravado">BRAVADO</p>
+  <bravado-navigation></bravado-navigation>
+  <hr>
   <b-row class="justify-content-md-center">
-    <b-button size="lg" variant="primary">Submit Assignment</b-button>
+    <b-button size="lg" href="/assignment" variant="primary">Submit Assignment</b-button>
     
 
       </b-row>
@@ -21,7 +22,9 @@
           </b-row>
           <hr>
           <b-row class="justify-content-md-center">
-              <b-button size="lg" variant="danger">Give up challenge</b-button>
+              <b-button size="lg" variant="danger" v-b-modal.giveup>Give Up Challenge</b-button>
+          <b-modal id="giveup" title="Are you sure you want to leave the challenge?">
+            </b-modal>
               </b-row>
 </b-container>
 
@@ -31,6 +34,22 @@
 
 
 </template>
+
+<script>
+import bravadoNavigation from '~/components/bravadoNavigation.vue'
+
+export default { 
+  
+  components: { bravadoNavigation },
+  
+}
+</script>
+
+
+
+
+
+
 <style>
 #Bravado{
   font-size: 50px;
