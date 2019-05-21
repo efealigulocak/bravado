@@ -8,13 +8,13 @@
 
 <b-row>
 
-    <b-col md="4"><b-button size="lg" href="/challenge">Back to Challenge</b-button></b-col>
+    <b-col md="2"><b-button block size="lg" href="/challenge">Challenge</b-button></b-col>
 
 </b-row>
 <hr>
 <b-row>
-    <b-col md="3">
-    <div id="assignment" class="p-3 mb-2 bg-primary text-white">Assignment</div>
+    <b-col md="2">
+    <div id="assignment" class="p-2 mb-2 bg-primary text-white">Assignment</div>
     </b-col>
 </b-row>
 <b-row>
@@ -56,7 +56,7 @@ export default {
 <style>
 
 #assignment{
-  font-size: 30px;
+  font-size: 25px;
 text-align: center;
 
  
