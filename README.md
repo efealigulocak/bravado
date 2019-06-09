@@ -39,7 +39,7 @@
 - [ ] Delete User
 - [ ] Comment Challenge
 - [ ] Earn Reward
-- [ ] Assign submission
+- [x] Submit assignment
 - [ ] Vote submission
 
 ### Use case diagram
