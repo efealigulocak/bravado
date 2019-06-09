@@ -96,21 +96,25 @@ export default {
     }
   },
   async created() {
-    if(this.$route.params !== undefined)
-    this.args = {
-      search : this.$route.params.search
-    }
+    if (this.$route.params !== undefined)
+      this.args = {
+        search: this.$route.params.search
+      }
     this.getList()
-    this.args = {};
+    this.args = {}
   },
   methods: {
     getList: async function(args) {
       this.args = Object.assign(this.args, args)
-      let { data } = await this.$axios.post('/api/challenge/all', this.args, {
-        headers: {
-          authorization: `Bearer ${this.$store.state.auth.token}`
+      let { data } = await this.$axios.post(
+        process.env.baseUrl + '/api/challenge/all',
+        this.args,
+        {
+          headers: {
+            authorization: `Bearer ${this.$store.state.auth.token}`
+          }
         }
-      })
+      )
       if (data.length)
         data = data.map(c => {
           c.reward = JSON.parse(c.reward)
