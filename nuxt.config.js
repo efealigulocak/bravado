@@ -2,10 +2,12 @@ const pkg = require('./package')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 
+const SERVER_URL = process.env.BASE_URL || 'http://localhost:3000'
+
 module.exports = {
   mode: 'universal',
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: SERVER_URL
   },
   /*
    ** Headers of the page
@@ -50,8 +52,8 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
-    browserBaseURL: process.env.BASE_URL || 'http://localhost:3000'
+    baseURL: SERVER_URL,
+    browserBaseURL: SERVER_URL
   },
 
   /*
